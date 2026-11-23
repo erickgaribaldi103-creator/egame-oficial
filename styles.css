@@ -178,3 +178,12 @@
 #notifyEgame,#copyNotice{margin-top:12px;width:100%;justify-content:center}
 @media(max-width:1080px){.egame-level-grid,.how-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:580px){.egame-level-grid,.how-grid,.checkout-selection{grid-template-columns:1fr}.checkout-modal{padding:22px}}
+
+
+/* 07 — Flujo de aportaciones SPEI + comprobante manual por WhatsApp */
+.checkout-hint { font-size:12px;color:#c0d3e9;line-height:1.7;margin:10px 0 0; }
+.checkout-hint strong { color:#ffffff; }
+.whatsapp-button { width:100%; margin-top:12px; white-space:normal; text-align:center; }
+.whatsapp-button:disabled { opacity:.45; cursor:not-allowed; transform:none; box-shadow:none; }
+.field-group input[type="date"] { color-scheme:dark; }
+.checkout-method .bank-data { margin:4px 0 16px; }
