@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e1d">
+  <meta name="description" content="EGAME: medios, entretenimiento, tecnología y videojuegos. Conoce nuestros proyectos y cómo apoyar su desarrollo.">
+  <title>EGAME | Portal oficial — Prototipo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Iconografía vectorial embebida, sin dependencias externas -->
+  <svg aria-hidden="true" width="0" height="0" style="position:absolute;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-hex" viewBox="0 0 24 24"><path d="M7 3h10l4 9-4 9H7l-4-9 4-9Z"/><path d="M8 8h8M8 12h6M8 16h8"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-7-7 7 7-7 7"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.5 5.5a5.6 5.6 0 0 0-8.5.3 5.6 5.6 0 0 0-8.5-.3c-2.1 2.1-2.1 5.5 0 7.6L12 21l8.5-7.9c2.1-2.1 2.1-5.5 0-7.6Z"/></symbol>
+    <symbol id="i-news" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h3M14 15h2M8 18h8"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2L12 2Z"/></symbol>
+    <symbol id="i-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m12 7 4 3-1.6 4.8h-4.8L8 10l4-3Zm0-4V7M3.4 9.2 8 10M5 18l4.6-3.2M19 18l-4.6-3.2M20.6 9.2 16 10"/></symbol>
+    <symbol id="i-radio" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="12" rx="2"/><path d="m5 9 13-6M7 13h6M7 16h6"/><circle cx="17" cy="15" r="2"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19V5m0 14h17M8 15l4-5 3 2 5-7"/><path d="M16 5h4v4"/></symbol>
+    <symbol id="i-chess" viewBox="0 0 24 24"><path d="M7 21h10M6 17h12l-1 4H7l-1-4Zm2 0-1-8 3-3 2 2 2-2 3 3-1 8M10 3h4M12 1v6"/></symbol>
+    <symbol id="i-delivery" viewBox="0 0 24 24"><path d="M3 7h12v11H3V7Zm12 4h3l3 3v4h-6v-7Z"/><circle cx="7" cy="19" r="2"/><circle cx="18" cy="19" r="2"/><path d="M5 11h6"/></symbol>
+    <symbol id="i-game" viewBox="0 0 24 24"><path d="M7 8h10c2 0 3 1 4 5l1 4c.4 2-1.7 3-3 2l-3-3H8l-3 3c-1.3 1-3.4 0-3-2l1-4c1-4 2-5 4-5Z"/><path d="M6 12h5m-2-2v5M17 12h.01M19 14h.01"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 6-4 9-9 10-5-1-9-4-9-10V6l9-4Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M2 6h20v3H2zM12 6v15"/><path d="M12 6S7 6 7 3s5-2 5 3Zm0 0s5 0 5-3-5-2-5 3Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></symbol>
+    <symbol id="i-open" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M20 13v6H4V4h6"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 2h7l5 5v15H5V2h2Z"/><path d="M14 2v5h5M8 12h8M8 16h8"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7v.01"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  </svg>
+
+  <!-- 01 — CABECERA -->
+  <header class="header">
+    <div class="shell head-row">
+      <a href="#inicio" class="brand" aria-label="EGAME, proyecto mexicano, volver al inicio"><span class="brand-icon"><svg class="icon"><use href="#i-hex"/></svg></span><span class="brand-text"><span class="brand-name">EGAME<span class="dot">.</span></span><small class="brand-subtitle">PROYECTO MEXICANO</small></span></a>
+      <nav id="mainNav" class="nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a><a href="#apoyar">Apoya EGAME</a><a href="#ecosistema">Plataformas</a><a href="#ruta">Nuestra ruta</a><a href="#transparencia">Transparencia</a><a href="#contacto">Contacto</a>
+      </nav>
+      <a class="btn btn-primary btn-sm head-cta" href="#apoyar"><svg class="icon"><use href="#i-heart"/></svg> Contribuir</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 02 — HERO -->
+    <section id="inicio" class="shell hero">
+      <div>
+        <span class="overline">Ecosistema digital independiente</span>
+        <h1>Grandes ideas.<br><span class="gradient">Un mismo universo.</span></h1>
+        <p class="hero-p">Noticias, espectáculos, deportes, radio y videojuegos. En EGAME estamos construyendo plataformas que conectan información, entretenimiento y tecnología.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#apoyar"><svg class="icon"><use href="#i-heart"/></svg> Apoya EGAME <svg class="icon"><use href="#i-arrow"/></svg></a><a class="btn btn-outline" href="#ecosistema">Conoce los proyectos <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+        <div class="hero-note"><span class="pulse"></span> Portal oficial en desarrollo · Prototipo visual interactivo</div>
+      </div>
+      <div class="hero-stage" aria-label="Composición gráfica del universo de proyectos EGAME">
+        <div class="display">
+          <div class="core"><div class="core-inner">E.</div></div>
+          <div class="smallcard sc1"><span class="miniicon"><svg class="icon"><use href="#i-news"/></svg></span><span><b>NOTICIAS EGAME</b><small>Información actual</small></span></div>
+          <div class="smallcard sc2"><span class="miniicon"><svg class="icon"><use href="#i-ball"/></svg></span><span><b>DEPORTES GAME</b><small>Pasión deportiva</small></span></div>
+          <div class="smallcard sc3"><span class="miniicon"><svg class="icon"><use href="#i-chess"/></svg></span><span><b>AJEDREZ GAME</b><small>Reto y estrategia</small></span></div>
+          <div class="smallcard sc4"><span class="miniicon"><svg class="icon"><use href="#i-game"/></svg></span><span><b>EGAME GAMES</b><small>Nuevas experiencias</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 — RECAUDACIÓN, SECCIÓN PRIORITARIA -->
+    <section id="apoyar" class="section section-alt">
+      <div class="shell">
+        <div class="section-head"><span class="overline">Construye EGAME con nosotros</span><h2>El próximo proyecto puede empezar con tu apoyo.</h2><p>Tu contribución ayudará a convertir nuestras ideas en plataformas reales. Podrás aportar libremente o elegir una recompensa cuando se activen las campañas.</p></div>
+
+        <div class="fund-layout">
+          <div class="panel fund-intro">
+            <span class="tiny-tag">Campaña en preparación</span>
+            <h3>Fondo de desarrollo EGAME</h3>
+            <p>Estamos creando un proyecto mexicano de medios, tecnología y videojuegos. Las aportaciones se habilitarán cuando los medios de pago y el proceso de verificación estén listos.</p>
+            <div class="meter"><div class="meter-label"><span>Recaudación</span><span>Por iniciar</span></div><div class="meter-track"><div class="meter-fill"></div></div><div class="meter-info"><span>Total: por publicar</span><span>Meta: por definir</span></div></div>
+            <div class="disclaimer"><svg class="icon"><use href="#i-info"/></svg><span>Solo reportaremos aportaciones realmente verificadas. No hay pagos automáticos ni correos de confirmación activos en este prototipo.</span></div>
+          </div>
+          <div class="fund-options">
+            <article class="panel fund-card">
+              <div class="circle"><svg class="icon"><use href="#i-heart"/></svg></div>
+              <h3>Aportación voluntaria</h3><p>Apoya a EGAME con la cantidad que tú decidas, sin recompensa.</p>
+              <ul><li>Sin registro ni contraseña</li><li>Solo necesitas tu correo</li><li>Confirmación tras verificar el pago</li></ul>
+              <button class="btn btn-primary choose-contribution" data-level="libre" type="button">Elegir cantidad <svg class="icon"><use href="#i-arrow"/></svg></button>
+            </article>
+            <article class="panel fund-card">
+              <div class="circle alt"><svg class="icon"><use href="#i-gift"/></svg></div>
+              <h3>Aportación con recompensa</h3><p>Selecciona un nivel para ver su importe y los métodos de pago correspondientes.</p>
+              <ul><li>Cada nivel tiene sus propios enlaces</li><li>Identificación mediante correo</li><li>Beneficios sujetos a confirmación</li></ul>
+              <a href="#niveles-egame" class="btn btn-outline">Ver niveles <svg class="icon"><use href="#i-arrow"/></svg></a>
+            </article>
+          </div>
+        </div>
+
+        <!-- 03-A — NIVELES CON ACCESO A SU PROPIO PAGO -->
+        <section id="niveles-egame" class="payment-methods" aria-labelledby="levelsTitle">
+          <div class="section-head">
+            <span class="overline">Apoyos con recompensa</span>
+            <h2 id="levelsTitle">Elige tu nivel en EGAME</h2>
+            <p>Cada botón prepara el importe de su nivel. Para identificar al colaborador solicitamos solamente su correo; no es necesario abrir una cuenta.</p>
+          </div>
+          <div class="egame-level-grid">
+            <article class="panel egame-level-card">
+              <span class="level-mark">01 / ALIADO</span><h3>$50 <small>MXN</small></h3>
+              <p>Agradecimiento digital.</p>
+              <button class="btn btn-outline choose-contribution" data-level="aliado" type="button">Contribuir como Aliado</button>
+            </article>
+            <article class="panel egame-level-card">
+              <span class="level-mark">02 / IMPULSOR</span><h3>$150 <small>MXN</small></h3>
+              <p>Nombre en un muro de agradecimientos, con autorización.</p>
+              <button class="btn btn-outline choose-contribution" data-level="impulsor" type="button">Contribuir como Impulsor</button>
+            </article>
+            <article class="panel egame-level-card">
+              <span class="level-mark">03 / PATROCINADOR</span><h3>$300 <small>MXN</small></h3>
+              <p>Reconocimiento digital especial.</p>
+              <button class="btn btn-outline choose-contribution" data-level="patrocinador" type="button">Contribuir como Patrocinador</button>
+            </article>
+            <article class="panel egame-level-card">
+              <span class="level-mark">04 / FUNDADOR</span><h3>$500 <small>MXN</small></h3>
+              <p>Distintivo digital de fundador y agradecimiento.</p>
+              <button class="btn btn-outline choose-contribution" data-level="fundador" type="button">Contribuir como Fundador</button>
+            </article>
+          </div>
+          <p class="payment-warning">Estos niveles y beneficios son propuestas. Los enlaces reales y el envío de correos permanecerán pendientes de configuración. Seleccionar un nivel no significa que se haya pagado.</p>
+        </section>
+
+        <section class="payment-methods" aria-labelledby="howTitle">
+          <div class="section-head">
+            <span class="overline">Sin registro de usuario</span>
+            <h2 id="howTitle">¿Cómo sabremos quién contribuyó?</h2>
+            <p>Correo de contacto + nivel + importe + referencia provisional de EGAME + folio de transacción del proveedor. Comprobaremos el pago antes de enviar cualquier confirmación de aportación o recompensa.</p>
+          </div>
+          <div class="how-grid">
+            <div class="how-item"><b>1</b><span>Seleccionas nivel y escribes tu correo.</span></div>
+            <div class="how-item"><b>2</b><span>Eliges SPEI, PayPal o Mercado Pago.</span></div>
+            <div class="how-item"><b>3</b><span>Envías tu aviso con el folio real de pago.</span></div>
+            <div class="how-item"><b>4</b><span>EGAME comprueba la operación y responde a tu correo.</span></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- 04 — ECOSISTEMA -->
+    <section id="ecosistema" class="section">
+      <div class="shell">
+        <div class="section-head"><span class="overline">Nuestras plataformas</span><h2>Todo un ecosistema, una sola visión.</h2><p>Ocho líneas de desarrollo que iremos construyendo por etapas. Selecciona cualquier tarjeta para descubrir la propuesta de esa plataforma.</p></div>
+        <div class="ecosystem-grid" id="divisionGrid">
+          <article class="division" style="--rgb:88,156,255;--accent:#76b6ff"><span class="division-ico"><svg class="icon"><use href="#i-news"/></svg></span><h3>NOTICIAS EGAME</h3><p>Información, actualidad y tecnología con un portal especializado.</p><div class="division-bottom"><span class="status">Planeación</span><button class="detail-btn" type="button" data-project="noticias" aria-label="Ver Noticias EGAME"><svg class="icon"><use href="#i-arrow"/></svg></button></div></article>
+          <article class="division" style="--rgb:245,135,214;--accent:#ec9adf"><span class="division-ico"><svg class="icon"><use href="#i-spark"/></svg></span><h3>ESPECTÁCULOS EGAME</h3><p>Música, cine, cultura, celebridades y entretenimiento.</p><div class="division-bottom"><span class="status">Planeación</span><button class="detail-btn" type="button" data-project="espectaculos" aria-label="Ver Espectáculos EGAME"><svg class="icon"><use href="#i-arrow"/></svg></button></div></article>
+          <article class="division" style="--rgb:114,224,161;--accent:#87e5ae"><span class="division-ico"><svg class="icon"><use href="#i-ball"/></svg></span><h3>DEPORTES GAME</h3><p>Fútbol, resultados, tablas, estadísticas y cobertura deportiva.</p><div class="division-bottom"><span class="status">Planeación</span><button class="detail-btn" type="button" data-project="deportes" aria-label="Ver Deportes GAME"><svg class="icon"><use href="#i-arrow"/></svg></button></div></article>
+          <article class="division" style="--rgb:135,154,252;--accent:#a3b2ff"><span class="division-ico"><svg class="icon"><use href="#i-radio"/></svg></span><h3>RADIO GAME</h3><p>Audio en vivo, programación y experiencias radiofónicas digitales.</p><div class="division-bottom"><span class="status dev">En desarrollo</span><button class="detail-btn" type="button" data-project="radio" aria-label="Ver Radio GAME"><svg class="icon"><use href="#i-arrow"/></svg></button></div></article>
+          <article class="division" style="--rgb:255,199,101;--accent:#ffd490"><span class="division-ico"><svg class="icon"><use href="#i-chart"/></svg></span><h3>APUESTAS GAME</h3><p>Estadísticas, análisis y pronósticos deportivos como punto de partida.</p><div class="division-bottom"><span class="status">Futuro</span><button class="detail-btn" type="button" data-project="apuestas" aria-label="Ver Apuestas GAME"><svg class="icon"><use href="#i-arrow"/></svg></button></div></article>
+          <article class="division" style="--rgb:104,216,232;--accent:#80e5f1"><span class="division-ico"><svg class="icon"><use href="#i-chess"/></svg></span><h3>AJEDREZ GAME</h3><p>Partidas online, jugadores, torneos y desafíos de estrategia.</p><div class="division-bottom"><span class="status dev">En desarrollo</span><button class="detail-btn" type="button" data-project="ajedrez" aria-label="Ver Ajedrez GAME"><svg class="icon"><use href="#i-arrow"/></svg></button></div></article>
+          <article class="division" style="--rgb:255,149,115;--accent:#ffa98b"><span class="division-ico"><svg class="icon"><use href="#i-delivery"/></svg></span><h3>DELIVERY GAME</h3><p>Videojuego de repartidores: desde 2D hasta una visión 3D.</p><div class="division-bottom"><span class="status dev">En desarrollo</span><button class="detail-btn" type="button" data-project="delivery" aria-label="Ver Delivery GAME"><svg class="icon"><use href="#i-arrow"/></svg></button></div></article>
+          <article class="division" style="--rgb:159,129,255;--accent:#bca6ff"><span class="division-ico"><svg class="icon"><use href="#i-game"/></svg></span><h3>EGAME GAMES</h3><p>Un catálogo creciente de videojuegos originales para explorar.</p><div class="division-bottom"><span class="status">Expansión</span><button class="detail-btn" type="button" data-project="games" aria-label="Ver EGAME Games"><svg class="icon"><use href="#i-arrow"/></svg></button></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 — PLAN DE LANZAMIENTO -->
+    <section id="ruta" class="section section-alt">
+      <div class="shell">
+        <div class="section-head"><span class="overline">Construcción por etapas</span><h2>Una visión a largo plazo. Pasos concretos.</h2><p>Empezamos por una base sólida y ampliamos el ecosistema conforme se terminen los desarrollos. Este orden es provisional y no representa fechas prometidas de lanzamiento.</p></div>
+        <div class="roadmap">
+          <article class="phase"><small>FASE 01</small><h3>Portal central EGAME</h3><p>Identidad, sitio corporativo, catálogo de proyectos, recaudación y transparencia.</p></article>
+          <article class="phase"><small>FASE 02</small><h3>Medios informativos</h3><p>Portales de noticias, espectáculos y deportes con contenidos propios.</p></article>
+          <article class="phase"><small>FASE 03</small><h3>Experiencias interactivas</h3><p>Ajedrez, radio digital y nuevas versiones de Delivery GAME.</p></article>
+          <article class="phase"><small>FASE 04</small><h3>Expansión EGAME</h3><p>Nuevos videojuegos, comunidad y proyectos tecnológicos adicionales.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 — TRANSPARENCIA -->
+    <section id="transparencia" class="section">
+      <div class="shell">
+        <div class="section-head"><span class="overline">Confianza y claridad</span><h2>El avance se demuestra. Los recursos se explican.</h2><p>Cuando la recaudación esté habilitada, publicaremos información sobre ingresos, gastos y metas de desarrollo sin exponer los datos personales de los colaboradores.</p></div>
+        <div class="proof-layout">
+          <div class="panel transp"><h3>Estado de los fondos</h3><div class="stat-grid"><div class="stat"><span>Fondos recibidos</span><b>—</b></div><div class="stat"><span>Gastos reportados</span><b>—</b></div><div class="stat"><span>Saldo disponible</span><b>—</b></div></div><div class="transp-bottom">Todavía no hay una campaña de cobro activa. Los importes se mostrarán cuando exista información verificable. Cifras expresadas en MXN.</div></div>
+          <div class="proof-points">
+            <div class="proof-point"><span class="circle"><svg class="icon"><use href="#i-doc"/></svg></span><span><h4>Presupuestos por proyecto</h4><p>Explicaremos los objetivos y en qué recursos planeamos invertir.</p></span></div>
+            <div class="proof-point"><span class="circle"><svg class="icon"><use href="#i-chart"/></svg></span><span><h4>Reportes de avance</h4><p>Documentaremos las funciones terminadas y las tareas pendientes.</p></span></div>
+            <div class="proof-point"><span class="circle"><svg class="icon"><use href="#i-shield"/></svg></span><span><h4>Privacidad de los colaboradores</h4><p>El reconocimiento público será opcional y requerirá autorización.</p></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 — CONTACTO / CIERRE -->
+    <section id="contacto" class="section" style="padding-top:12px">
+      <div class="shell"><div class="bottom-cta"><span class="overline" style="justify-content:center">El proyecto está comenzando</span><h2>EGAME se construye proyecto a proyecto.</h2><p>Estamos desarrollando el ecosistema y preparando sus canales oficiales de contacto y colaboración. Explora nuestras divisiones y conoce el modelo de apoyo propuesto.</p><a href="#apoyar" class="btn btn-primary"><svg class="icon"><use href="#i-heart"/></svg> Conoce cómo apoyar <svg class="icon"><use href="#i-arrow"/></svg></a></div></div>
+    </section>
+  </main>
+
+  <footer><div class="shell"><div class="foot-top"><div class="footer-brand"><a href="#inicio" class="brand"><span class="brand-icon"><svg class="icon"><use href="#i-hex"/></svg></span><span class="brand-text"><span class="brand-name">EGAME<span class="dot">.</span></span><small class="brand-subtitle">PROYECTO MEXICANO</small></span></a><p>Un ecosistema independiente de medios, entretenimiento, tecnología y videojuegos.</p></div><div class="foot-links"><a href="#apoyar">Apoya EGAME</a><a href="#ecosistema">Plataformas</a><a href="#ruta">Desarrollo</a><a href="#transparencia">Transparencia</a><a href="#contacto">Contacto</a></div></div><div class="foot-bottom"><span>© <span id="year">2026</span> EGAME · Prototipo conceptual</span><span><strong>No se procesan pagos en esta página. Los avisos por correo requieren tu envío voluntario.</strong></span></div></div></footer>
+
+  <!-- 08 — UNA SOLA VENTANA PARA CADA NIVEL Y SU MÉTODO DE PAGO -->
+  <div class="modal-backdrop" id="checkoutBackdrop" role="presentation">
+    <div class="modal checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle" tabindex="-1">
+      <button class="modal-close" type="button" aria-label="Cerrar" data-close="checkoutBackdrop">×</button>
+      <span class="tiny-tag">EGAME · Proyecto Mexicano</span>
+      <h2 id="checkoutTitle">Tu contribución a EGAME</h2>
+      <div class="checkout-selection">
+        <div><span class="mini-label">Nivel elegido</span><strong id="checkoutLevel">Aliado</strong></div>
+        <div><span class="mini-label">Importe</span><strong id="checkoutAmount">$50 MXN</strong></div>
+      </div>
+      <div id="freeAmountWrap" class="field-group" hidden>
+        <label for="freeAmount">Cantidad de tu aportación voluntaria (MXN)</label>
+        <input id="freeAmount" type="number" min="1" max="1000000" step="1" value="100" inputmode="numeric">
+      </div>
+      <div class="field-group">
+        <label for="supporterEmail">Correo electrónico para identificar tu aportación</label>
+        <input id="supporterEmail" type="email" autocomplete="email" placeholder="vanessa@ejemplo.com" required>
+        <small>No pediremos contraseña ni cuenta EGAME.</small>
+      </div>
+      <label class="consent-check"><input id="supporterConsent" type="checkbox"> <span>Acepto utilizar este correo para gestionar mi contribución y recibir su confirmación, después de la verificación.</span></label>
+      <button type="button" class="btn btn-primary" id="prepareContribution">Continuar a métodos de pago</button>
+      <p id="checkoutError" class="checkout-error" role="alert" hidden></p>
+
+      <div id="checkoutMethods" class="checkout-methods" hidden>
+        <div class="reference-card">
+          <span class="mini-label">Referencia provisional de EGAME</span>
+          <strong id="checkoutReference">—</strong>
+          <button type="button" class="mini-action" id="copyReference">Copiar referencia</button>
+          <small>Conserva esta referencia y el folio del pago. Esta referencia no se envía automáticamente a PayPal o Mercado Pago.</small>
+        </div>
+        <h3>Elige cómo contribuir</h3>
+        <div class="checkout-method-list">
+          <div class="checkout-method"><b>PayPal</b><a id="checkoutPaypal" class="btn btn-outline" target="_blank" rel="noopener noreferrer" hidden>Abrir pago del nivel</a><small id="checkoutPaypalStatus">Enlace de este nivel por configurar</small></div>
+          <div class="checkout-method"><b>Mercado Pago</b><a id="checkoutMercado" class="btn btn-outline" target="_blank" rel="noopener noreferrer" hidden>Abrir pago del nivel</a><small id="checkoutMercadoStatus">Enlace de este nivel por configurar</small></div>
+          <div class="checkout-method"><b>Transferencia SPEI</b><div id="speiCheckoutDetails" hidden><dl class="bank-data"><div><dt>Banco</dt><dd id="checkoutBank">—</dd></div><div><dt>Beneficiario</dt><dd id="checkoutBeneficiary">—</dd></div><div><dt>CLABE</dt><dd id="checkoutClabe">—</dd></div></dl><button type="button" class="mini-action" id="copyCheckoutClabe">Copiar CLABE</button><small>Usa el importe indicado y, si tu banco permite agregarlo, coloca la referencia en el concepto. Envíanos también el folio de la transferencia.</small></div><small id="checkoutSpeiStatus">Datos SPEI por configurar</small></div>
+        </div>
+        <div class="field-group"><label for="paymentFolio">Folio real de la operación (después de pagar)</label><input id="paymentFolio" type="text" maxlength="90" placeholder="Número de operación de SPEI, PayPal o Mercado Pago"></div>
+        <div class="field-group"><label for="paymentProvider">¿Con qué método realizaste el pago?</label><select id="paymentProvider"><option value="PayPal">PayPal</option><option value="Mercado Pago">Mercado Pago</option><option value="SPEI">Transferencia SPEI</option></select></div>
+        <a class="btn btn-primary" id="notifyEgame" href="#" hidden>Enviar aviso de pago a EGAME por correo</a>
+        <button type="button" class="btn btn-outline" id="copyNotice">Copiar aviso de pago</button>
+        <small id="contactStatus" class="method-status">Correo de EGAME pendiente de configurar.</small>
+        <div class="modal-note"><strong>Importante:</strong> enviar un aviso no confirma el pago. EGAME deberá revisar la transacción en su banco o proveedor y solo entonces responder al correo del colaborador. En esta versión no se envían correos automáticos.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE PROYECTOS -->
+  <div class="modal-backdrop" id="projectBackdrop" role="presentation"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="projectTitle" tabindex="-1"><button class="modal-close" type="button" aria-label="Cerrar" data-close="projectBackdrop">×</button><span id="projectStatus" class="tiny-tag">Proyecto EGAME</span><h2 id="projectTitle"></h2><p id="projectDescription"></p><div id="projectFeatures" class="detail-features"></div><div class="modal-note">La página específica de este proyecto se diseñará y conectará posteriormente. Esta ficha es parte del prototipo central.</div><div class="modal-actions"><button class="btn btn-primary" id="projectSupport" type="button">Conocer cómo apoyar <svg class="icon"><use href="#i-arrow"/></svg></button><button class="btn btn-outline" type="button" data-close="projectBackdrop">Cerrar</button></div></div></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
